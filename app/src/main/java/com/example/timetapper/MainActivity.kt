@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
     internal lateinit var tapMeButton: Button //properties
     internal lateinit var gameScoreText: TextView
     internal lateinit var timerLeftText: TextView
-
+    //internal lateinit var menu: Menu
     internal var gameStarted = false
     internal lateinit var countDownTimer: CountDownTimer
     internal var CDval : Long = 20000
@@ -40,7 +40,6 @@ class MainActivity : AppCompatActivity() {
         this.tapMeButton = findViewById(R.id.tap_me_button)
         this.gameScoreText = findViewById(R.id.Display_score)
         this.timerLeftText = findViewById(R.id.Display_time_left)
-        //this.menuItem = findViewById(R.id.actionMenu)
 
         tapMeButton.setOnClickListener{ view ->
             val bounceAnimation = AnimationUtils.loadAnimation(this,R.anim.bounce)
@@ -57,32 +56,45 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        super.onCreateOptionsMenu(menu)
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+
         menuInflater.inflate(R.menu.menu,menu)
 
-        //registerForContextMenu(findViewById(R.id.actionMenu))
+
+        //this.registerForContextMenu(findViewById(R.id.actionMenu))
         //Log.d(TAG, "showInfor called")
+        //super.onCreateOptionsMenu(menu)
         return true
     }
 
 
-    override fun onContextItemSelected(item: MenuItem): Boolean {
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
-        Log.d(TAG,"showInfor called")
-         if(item.itemId==R.id.actionMenu){
-             Log.d(TAG,"showInfor called")
-             showInfo()
-         }
-        else{
-             super.onContextItemSelected(item)
-         }
-        return true
+
+        return when (item.itemId) {
+            R.id.actionMenu->{
+                Log.d(TAG,"showInfor 3 called")
+                showInfo()
+                return true
+            }
+            else->super.onContextItemSelected(item)
+        }
+
+//        Log.d(TAG,"showInfor 2 called")
+//
+//            if(item.itemId==R.id.actionMenu){
+//                Log.d(TAG,"showInfor 3 called")
+//                showInfo()
+//            }
+//            else{
+//            super.onContextItemSelected(item)
+//            }
+//        return true
     }
 
     private fun showInfo(){
 
-        Log.d(TAG,"showInfor called")
+        Log.d(TAG,"showInfor 4 called")
         val builder = AlertDialog.Builder(this)
         builder.setTitle(R.string.aboutTitle)
         builder.setMessage(R.string.aboutMessage)
