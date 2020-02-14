@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">TimeTapper</string>
+    <string name="app_name">Ttapper</string>
     <string name="tap_me_button">Tap me!!</string>
     <string name="time_left">Time left : %1$d</string>
     <string name="score">Your Score: %1$d</string>

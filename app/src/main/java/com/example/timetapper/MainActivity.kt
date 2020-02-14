@@ -73,7 +73,7 @@ class MainActivity : AppCompatActivity() {
 
         return when (item.itemId) {
             R.id.actionMenu->{
-                Log.d(TAG,"showInfor 3 called")
+                //Log.d(TAG,"showInfor 3 called")
                 showInfo()
                 return true
             }
@@ -93,14 +93,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun showInfo(){
-
-        Log.d(TAG,"showInfor 4 called")
         val builder = AlertDialog.Builder(this)
         builder.setTitle(R.string.aboutTitle)
         builder.setMessage(R.string.aboutMessage)
-        Log.d(TAG,"cant figure out")
         builder.show()
-        Log.d(TAG,"help me out")
     }
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
