@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Ttapper</string>
+    <string name="tap_me_button">Tap me!!</string>
+    <string name="time_left">Time left : %1$d</string>
+    <string name="score">Your Score: %1$d</string>
+    <string name="timeUp">Time up!!!Your Score is %1$d</string>
+    <string name="aboutMenu">About</string>
+    <string name="aboutTitle">TimeTapper</string>
+    <string name="aboutMessage">This was created by Mandy :P</string>
+</resources>
